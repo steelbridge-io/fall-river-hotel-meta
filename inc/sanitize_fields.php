@@ -19,4 +19,9 @@
 		if( isset( $_POST[ 'hero-cta-content' ] ) ) {
 			update_post_meta( $post_id, 'hero-cta-content', wp_kses_post( $_POST[ 'hero-cta-content' ] ) );
 		}
+
+		if( isset( $_POST[ 'scroll-to-cta' ] ) ) {
+			update_post_meta( $post_id, 'scroll-to-cta', wp_kses_post( $_POST[ 'scroll-to-cta' ] ) );
+		}
+
 	}
