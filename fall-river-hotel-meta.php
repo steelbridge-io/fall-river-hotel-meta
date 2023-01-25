@@ -19,7 +19,7 @@
 		global $post;
 		if(!empty($post)){
 			$pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
-			if($pageTemplate == 'templates/full-width-template.php' || 'templates/recreation-template.php') {
+			if($pageTemplate == 'templates/full-width-template.php' or $pageTemplate == 'templates/recreation-template.php') {
 				$types = array('post', 'page');
 				foreach($types as $type) {
 					add_meta_box( 'basic_meta', __( 'Hero Image Content', 'fall-river-hotel' ), 'frh_wide_temp_callback', $type, 'normal', 'high' );
